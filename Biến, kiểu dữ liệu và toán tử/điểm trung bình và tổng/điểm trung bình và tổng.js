@@ -1,0 +1,10 @@
+vatly=prompt("nhap diem vat ly:");
+hoahoc=prompt("nhap diem hoa hoc:");
+sinhhoc=prompt("nhap diem sinh hoc:");
+let vl=parseInt(vatly);
+let hh=parseInt(hoahoc);
+let sh=parseInt(sinhhoc);
+let diemTB=(vl+hh+sh)/3;
+let diemtong=(vl+hh+sh);
+let TB=parseFloat(diemTB);
+document.write("diem TB:"+diemTB + "<br>diem tong:"+diemtong);

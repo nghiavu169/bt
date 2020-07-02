@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <link rel="stylesheet" href="Máy tính đơn giản.css">
+</head>
+<body>
+<div id="main">
+    <div>
+        <input id="screen" type="text" disabled >
+    </div>
+    <div id="keyboard">
+        <table>
+            <tr>
+                <td><button class="button" onclick="kEy(1)">1</button></td>
+                <td><button class="button" onclick="kEy(2)">2</button></td>
+                <td><button class="button" onclick="kEy(3)">3</button></td>
+                <td><button class="button" onclick="kEy('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="kEy(4)">4</button></td>
+                <td><button class="button" onclick="kEy(5)">5</button></td>
+                <td><button class="button" onclick="kEy(6)">6</button></td>
+                <td><button class="button" onclick="kEy('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="kEy(7)">7</button></td>
+                <td><button class="button" onclick="kEy(8)">8</button></td>
+                <td><button class="button" onclick="kEy(9)">9</button></td>
+                <td><button class="button" onclick="kEy('x')">x</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="kEy('C')">C</button></td>
+                <td><button class="button" onclick="kEy(0)">0</button></td>
+                <td><button class="button" onclick="kEy('=')">=</button></td>
+                <td><button class="button" onclick="kEy('/')">/</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>
+<script>
+    function add(num) {
+        moniter=document.getElementById("screen").value;
+        moniter=moniter+num;
+        document.getElementById("screen").value=moniter;
+    }
+    function clearm() {
+        moniter="";
+        document.getElementById("screen").value=moniter;
+    }
+    function kEy(num) {
+        switch (num) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 0:
+                add(num);
+                break;
+            case 'C':
+                clearm();
+                break;
+            case '+':
+            case '-':
+            case 'x':
+            case '/':
+                firstnum=parseInt(document.getElementById("screen").value);
+                clearm();
+                operator=num;
+                break;
+            case '=':
+                secondnum=parseInt(document.getElementById("screen").value);
+                switch (operator) {
+                    case '+':
+                        result=firstnum+secondnum;
+                        break;
+                    case '-':
+                        result=firstnum-secondnum;
+                        break;
+                    case 'x':
+                        result=firstnum*secondnum;
+                        break;
+                    case '/':
+                        result=firstnum/secondnum;
+                        break;
+                }
+                document.getElementById("screen").value=result;
+        }
+    }
+</script>
