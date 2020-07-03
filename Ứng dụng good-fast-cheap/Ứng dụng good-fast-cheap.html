@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng good-fast-cheap</title>
+    <link rel="stylesheet" href="Ứng dụng good-fast-cheap.css">
+</head>
+<body>
+<label class="switch">
+    <input type="checkbox" id="good" onclick="CheckLap(1)"/>
+    <span class="slider round"></span>
+    Good
+</label>
+<br>
+<label>
+    <input type="checkbox" id="fast" onclick="CheckLap(2)"/>
+    Fast
+</label>
+<br>
+<label>
+    <input type="checkbox" id="cheap" onclick="CheckLap(3)"/>
+    Cheap
+</label>
+</body>
+</html>
+<script>
+    function CheckLap(type) {
+        good = document.getElementById("good");
+        fast = document.getElementById("fast");
+        cheap = document.getElementById("cheap");
+        if (good.checked == true && fast.checked == true && cheap.checked == true){
+            switch (type) {
+                case 1:
+                    document.getElementById("cheap").checked = false;
+                    break;
+                case 2:
+                    document.getElementById("good").checked = false;
+                    break;
+                case 3:
+                    document.getElementById("fast").checked = false;
+                    break;
+            }
+        }
+
+    }
+</script>
