@@ -5,11 +5,11 @@
     <title>Game puzzle</title>
 </head>
 <body>
-<div id="form" style="background: null;max-width: 700px;max-height: 750px" >
+<div id="form" style="background: none;max-width: 700px;max-height: 750px" >
     <img id="img1" name="1" src="image/top1.jpg" height="140" width="700" onclick="changeTop()"/><br>
     <img id="img2" name="3" src="image/upper3.jpg" height="140" width="700" onclick="changeUpper()"/><br>
     <img id="img3" name="1" src="image/mid1.jpg" height="140" width="700" onclick="changeMid()"/><br>
-    <img id="img4" name="2" src="image/down2.jpg" height="140" width="700" onclick="changeDown()"/><br>
+    <img id="img4" name="2" src="image/lower2.jpg" height="140" width="700" onclick="changeDown()"/><br>
     <img id="img5" name="3" src="image/bottom3.jpg" height="140" width="700" onclick="changeBottom()"/><br>
 </div>
 </body>
@@ -55,7 +55,7 @@ function changeDown() {
     }else {
         num1=1;
     }
-    document.getElementById("img4").src="image/down" + num1 + ".jpg";
+    document.getElementById("img4").src="image/lower" + num1 + ".jpg";
     document.getElementById("img4").name=num1;
     check();
 }

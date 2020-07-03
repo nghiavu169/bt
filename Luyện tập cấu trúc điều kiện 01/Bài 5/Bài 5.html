@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var diemkiemtra = parseInt(prompt('diem kiem tra:'));
+    var diemgiuaki = parseInt(prompt('diem giua ki:'));
+    var diemcuoiki = parseInt(prompt('diem cuoi ki'));
+    var diemtrungbinh=(diemkiemtra+diemgiuaki*2+diemcuoiki*3)/6;
+    if (diemtrungbinh > 0 && diemtrungbinh < 5){
+        alert('hoc sinh kem');
+    }else if (diemtrungbinh < 6.5){
+        alert('hoc sinh trung binh');
+    }else if (diemtrungbinh <8){
+        alert('hoc sinh kha');
+    }else {
+        alert('hoc sinh gioi');
+    }
+</script>
