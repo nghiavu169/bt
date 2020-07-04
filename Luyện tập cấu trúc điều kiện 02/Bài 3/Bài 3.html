@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>Nhap a(canh):<br>
+<input type="text" id="canh" style="margin-bottom: 20px" /><br>
+Dien tich hinh vuong la:<br>
+<input type="text" id="dientich" style="margin-bottom: 20px" disabled />
+<button type="button" onclick="tinh()">Tinh</button>
+</body>
+</html>
+<script>
+    function tinh() {
+        var a = parseFloat(document.getElementById("canh").value);
+        var S = Math.pow(a, 2);
+        document.getElementById("dientich").value = S;
+
+    }
+</script>

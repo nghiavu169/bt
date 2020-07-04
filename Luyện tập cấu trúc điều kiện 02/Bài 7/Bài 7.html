@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<form>
+    <br>Nhap gia tri a:
+    <input type="text" name="a" />
+    <br> Nhap gia tri b:
+    <input type="text" name="b" />
+    <br>Nhap gia tri c:
+    <input type="text" name="c" />
+    <br>Dap so:<br>
+    x1=<input type="text" name="x" disabled/>
+    <br>
+    x2=<input type="text" name="y" disabled/>
+    <input type="button" value="giai" onClick="giai(this.form)">
+</form>
+</body>
+</html>
+<script language="JavaScript">
+    function giai(form){
+        var x1,x2;
+        var x,y,z,delta;
+        x= parseFloat(form.a.value);
+        y= parseFloat(form.b.value);
+        z= parseFloat(form.c.value);
+        delta=(y*y-4*x*z)
+        if(delta ==0){
+            alert("phuong trinh co nghiem kep");
+            x1=-y/(2*x) ;
+            x2=-y/(2*x);
+            form.x.value=eval(x1);
+            form.y.value=eval(x2);
+        }
+        else if(delta<0){
+            alert("phuong trinh vo nghiem");
+        }
+        else{
+            alert("phuong trinh co hai nghiem");
+            x1=(-y-Math.sqrt(delta))/(2*x);
+            x2=(-y+Math.sqrt(delta))/(2*x);
+            form.x.value=eval(x1);
+            form.y.value=eval(x2);
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+Nhap so a:<br>
+<input type="text" id="soA" style="margin-bottom: 20px"/><br>
+Nhap so b:<br>
+<input type="text" id="soB" style="margin-bottom: 20px" /><br>
+nghiem x:<br>
+<input type="text" id="nghiem" style="margin-bottom: 20px" disabled /><br>
+<button type="button" onclick="tinhNghiem()"> Tinh </button>
+</body>
+</html>
+<script>
+    function tinhNghiem() {
+        var a = parseFloat(document.getElementById("soA").value);
+        var b = parseFloat(document.getElementById("soB").value);
+        if (a == 0){
+            alert('phuong trinh vo nghiem');
+        }else {
+            var x = -b / a;
+        }
+        document.getElementById("nghiem").value = x;
+    }
+</script>

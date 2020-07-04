@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+Nhap chieu rong:<br>
+<input type="text" id="chieurong" style="margin-bottom: 20px" /><br>
+Nhap chieu dai:<br>
+<input type="text" id="chieudai" style="margin-bottom: 20px" /><br>
+Dien tich hinh chu nhat la:<br>
+<input type="text" id="dientich" style="margin-bottom: 20px" disabled /><br>
+<button type="button" onclick="dientichhcn()">Tinh</button>
+</body>
+</html>
+<script>
+    function dientichhcn() {
+        var a = parseFloat(document.getElementById("chieurong").value);
+        var b = parseFloat(document.getElementById("chieudai").value);
+        var S = a * b;
+        document.getElementById("dientich").value = S;
+    }
+
+    
+</script>

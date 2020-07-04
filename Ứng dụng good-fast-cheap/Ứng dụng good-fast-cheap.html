@@ -6,25 +6,44 @@
     <link rel="stylesheet" href="Ứng dụng good-fast-cheap.css">
 </head>
 <body>
-<label class="switch">
-    <table>
-        <tr>
-        <td><input type="checkbox" id="good" onclick="CheckLap(1)"/>
-        <span class="slider round"></span></td>
-        <td>Good</td>
-        </tr>
-    </table>
-</label>
-<br>
-<label>
-    <input type="checkbox" id="fast" onclick="CheckLap(2)"/>
-    Fast
-</label>
-<br>
-<label>
-    <input type="checkbox" id="cheap" onclick="CheckLap(3)"/>
-    Cheap
-</label>
+<table>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="good" type="checkbox" onclick="CheckLap(1)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            GOOD
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="fast" type="checkbox" onclick="CheckLap(2)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            CHEAP
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="cheap" type="checkbox" onclick="CheckLap(3)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            FAST
+        </td>
+    </tr>
+</table>
 </body>
 </html>
 <script>

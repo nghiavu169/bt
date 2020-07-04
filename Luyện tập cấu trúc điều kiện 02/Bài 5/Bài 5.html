@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+Nhap canh a:<br>
+<input type="text" id="canha" style="margin-bottom: 20px"><br>
+Nhap canh b:<br>
+<input type="text" id="canhb" style="margin-bottom: 20px"><br>
+Dien tich tan giac vuong la:<br>
+<input type="text" id="diemtictamgiac" style="margin-bottom: 20px" disabled.><br>
+<button type="button" onclick="dientichtgv()"> Tinh </button>
+</body>
+</html>
+<script>
+    function dientichtgv() {
+        var a = parseFloat(document.getElementById("canha").value);
+        var b = parseFloat(document.getElementById("canhb").value);
+        var S = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+        document.getElementById("diemtictamgiac").value = S;
+    }
+</script>
