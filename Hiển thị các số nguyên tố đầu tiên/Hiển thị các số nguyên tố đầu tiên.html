@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<p id="helu"></p>
+</body>
+</html>
+<script>
+    let prime = "";
+    let count = 0;
+    let num = 1;
+    function check(num) {
+
+        for (let i=2; i<num; i++){
+            if(num % i === 0){
+                return false;
+            }
+        }return true;
+    }
+    while (20 > count){
+        num++;
+        if (check(num)){
+            if(num === 2){
+                prime = prime + num;
+                count ++;
+            }else {
+            prime = prime + ',' + num;
+            count++;
+            }
+
+        }
+    }
+    document.getElementById("helu").innerHTML = prime;
+</script>
