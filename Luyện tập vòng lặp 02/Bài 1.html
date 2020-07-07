@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let fibonacci = '1, 1';
+    let a = 1;
+    let b = 1;
+    let N = parseInt(prompt('nhap N:'));
+    let count = 2;
+    while (count < N){
+        let n = b;
+        b = a + b;
+        a = n;
+        fibonacci = fibonacci + ', ' + b;
+        count++;
+    }
+    document.write(fibonacci);
+</script>
