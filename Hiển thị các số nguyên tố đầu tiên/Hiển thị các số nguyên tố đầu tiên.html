@@ -12,22 +12,22 @@
     let prime = "";
     let count = 0;
     let num = 1;
+    let n = parseInt(prompt('nhap so:'));
     function check(num) {
-
-        for (let i=2; i<num; i++){
+        for (let i=2; i<Math.sqrt(num); i++){
             if(num % i === 0){
                 return false;
             }
         }return true;
     }
-    while (20 > count){
+    while (n > count){
         num++;
         if (check(num)){
             if(num === 2){
                 prime = prime + num;
-                count ++;
+                count++;
             }else {
-            prime = prime + ',' + num;
+            prime = prime + ', ' + num;
             count++;
             }
 

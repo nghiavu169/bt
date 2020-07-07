@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+-Xin mời nhập khoảng random:<br>
++Min:<br>
+<input type="text" id="min" style="margin-bottom: 10px;margin-top: 10px"/><br>
++Max:<br>
+<input type="text" id="max" style="margin-bottom: 10px;margin-top: 10px"/><br>
+
+<button onclick="checker()">Chơi!</button>
+</body>
+</html>
+<script>
+    function checker() {
+    let min = parseInt(document.getElementById("min").value);
+    let max = parseInt(document.getElementById("max").value);
+    let ranDom = Math.floor(Math.random() * (max - min + 1) + min);
+        for (let i = 0; i < 3; i++) {
+            let num = parseInt(prompt('Nhập số của bạn:'));
+            if (num === ranDom){
+                alert('Bạn đã đoán đúng');
+                alert('Xin mời bạn đóng 500k làm hồ sơ nhận thưởng!');
+            }else if (num < ranDom){
+                alert('Đoán sai rồi :((. Xin mời bạn đóng 500k for hint');
+                alert('Hãy tăng số của bạn lên');
+            }else {
+                alert('Đoán sai rồi :((. Xin mời bạn đóng 500k for hint');
+                alert('Hãy giảm số của bạn xuống');
+            }
+        }
+    }
+</script>
