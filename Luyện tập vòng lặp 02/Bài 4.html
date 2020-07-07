@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let canha = +prompt('nhap canh a:');
+    let canhb = +prompt('nhap canh b:');
+    for (let i=0; i<canha; i++){
+        for (let j = 0; j < canhb ; j++) {
+            if(i===0||i===canha-1||j===0||j===canhb-1){
+                document.write('*');
+            }else
+            {
+                document.write('&#160' + '&#160');
+            }
+        }
+        document.write('<br>');
+    }
+</script>

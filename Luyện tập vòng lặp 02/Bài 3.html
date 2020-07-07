@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = +prompt('Nhap canh:');
+    for (let i = 0; i < n ; i++) {
+        for (let j = 0; j < i+1 ; j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    for (let i = 0; i < n ; i++) {
+        for (let j = 0; j < n-i ; j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    for (let i = 0; i < n ; i++) {
+        for (let j = 0; j < n ; j++) {
+            if (j < n-i-1){
+                document.write('&#160' + '&#160');
+            }else {
+                document.write('*');
+            }
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    for (let i = n; i >0 ; i--) {
+        for (let j = 0; j < n ; j++) {
+            if (j < n-i){
+                document.write('&#160' + '&#160');
+            }else {
+                document.write('*');
+            }
+        }
+        document.write('<br>');
+    }
+
+</script>
