@@ -9,17 +9,17 @@
 </body>
 </html>
 <script>
-let fibonacci = '0, 1';
-let a = 0;
-let b = 1;
-let n = 2;
-while (n < 20){
-let k = b;
-b = a + b;
-a = k;
-fibonacci = fibonacci + ", " + b;
-n++;
-}
-document.write(fibonacci);
+    let a = 1;
+    let b = 1;
+    let fibonacci = a+ ', '+ b;
+    let n = 2;
+    while (n < 5) {
+        let k = b;
+        b = a + b;
+        a = k;
+        fibonacci = fibonacci + ", " + b;
+        n++;
+    }
+    document.write(fibonacci);
 </script>
 
