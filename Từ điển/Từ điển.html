@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let word = prompt('Nhập từ cần translate:');
+    let tiengviet = ['con chó', 'con mèo', 'con chim trống', 'com bướm'];
+    let english = ['dawg', 'pussycat', 'cock', 'butterfly'];
+    for (let i = 0; i < tiengviet.length ; i++) {
+        if (word === tiengviet[i]) {
+            alert(english[i]);
+            break;
+        }if (i === tiengviet.length - 1){
+            alert('Chịu!');
+        }
+    }
+
+</script>
