@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let muoiphantu = ['a','A','b','B','c','C','d','D','e','E'];
+    let phantu = prompt('nhap phan tu can kiem tra:');
+    for (let i = 0; i < muoiphantu.length; i++) {
+        if (phantu === muoiphantu[i]){
+            muoiphantu.splice(i,1);
+        }
+    }
+    console.log(muoiphantu);
+</script>

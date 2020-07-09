@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let cacsonguyen2 = [15,6,-91,4,6,81,10,-56,124,54];
+    let max = cacsonguyen2[0];
+    let soTB = 0;
+    for (let i = 0; i < cacsonguyen2.length; i++) {
+        if (cacsonguyen2[i] > max){
+            max = cacsonguyen2[i];
+        }
+        soTB = (soTB + cacsonguyen2[i]) / cacsonguyen2.length;
+    }
+    alert(cacsonguyen2);
+    alert('so lon nhat trong mang la: '+max);
+    alert('trung binh tat ca cac phan tu trong mang la: '+soTB);
+</script>

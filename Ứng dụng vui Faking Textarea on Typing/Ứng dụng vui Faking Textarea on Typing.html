@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui <F></F>aking Textarea on Typing</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h2>Type anything slowly</h2>
+    <form>
+        <label for="txt"></label><textarea id="txt" cols="40" rows="10" onkeyup="typeTextarea()"></textarea>
+    </form>
+</div>
+</body>
+</html>
+<script>
+    let a = 'Ôi! sông nước quê hương đẹp làm sao. Sau một năm gặp lại, lần đầu tiên, em được nhìn cây cổ thụ già nơi các bạn nhỏ đang nô đùa và những tiếng vỗ tay hò reo giữa nơi yên tĩnh ở đồng quê. Không những thế, nơi đây đã thay đổi hơn trước, những tòa nhà cao tầng đã được xây nhiều hơn trước hòa với con đường đã được tráng một lớp nhựa dày. Ôi! Thật tuyệt vời làm sao. Tiếp sau đó, em còn được thưởng thức các món đặc sản ở quê em trông nó ngon tuyệt!. Tuy những ngày về quê không được bao lâu nhưng nó là những kỷ niệm rất có ý nghĩa mà em không thể nào quên được, vì ở đây em còn được ở gần bà nội, ngắm cảnh đồng quê thanh bình yên ả.';
+    let n = '';
+    function typeTextarea(){
+        let t = document.getElementById('txt').value;
+        let j = t.length;
+        if(j > 0)
+        {
+            n = '';
+            for(let i=0; i<j; i++)
+            {
+                n = n + a[i];
+                if(i === a.length)
+                {
+                    document.getElementById('txt').value="";
+                    n = "";
+                }
+            }
+        }
+        document.getElementById('txt').value = n;
+
+    }
+</script>
