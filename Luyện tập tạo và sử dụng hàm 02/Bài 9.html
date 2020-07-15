@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [];
+    while (true) {
+        b = prompt();
+        if (b !== '' && b != null) a.push(b);
+        else break;
+    }
+    let c = prompt('c:');
+    function checkers(a,c) {
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (c === a[i]){
+                count++;
+            }
+        }if (count > 0) console.log(count);
+        else console.log(-1);
+    }
+    checkers(a,c);
+</script>

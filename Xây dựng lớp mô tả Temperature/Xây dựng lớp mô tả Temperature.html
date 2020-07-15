@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let Temperature = function (degree) {
+        this.Celsius = degree;
+        this.getCelsius = () => {
+            return this.Celsius;
+        }
+        this.degreeFConvert = () => {
+            return 1.8 * degree + 32;
+        }
+        this.degreeKConvert = () => {
+            return degree + 273.15;
+        }
+    }
+    let Fahrenheit = new Temperature(25);
+    Celsius = Fahrenheit.getCelsius();
+    Fahrenheit = Fahrenheit.degreeFConvert();
+    console.log('do F: '+Fahrenheit);
+
+    let Kelvin = new Temperature(25);
+    Celsius = Kelvin.getCelsius();
+    Kelvin = Kelvin.degreeKConvert();
+    console.log('do K: '+Kelvin);
+
+</script>

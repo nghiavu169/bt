@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = + prompt('a:');
+    let b = + prompt('b:');
+    let c = + prompt('c:');
+    function GTNN(a,b,c) {
+        let min = a;
+        if (b < a && b < c) min = b;
+        if (c < a && c < b) min = c;
+        return min;
+    }
+    console.log(GTNN(a,b,c));
+</script>

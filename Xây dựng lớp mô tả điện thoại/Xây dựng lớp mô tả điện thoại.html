@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let Mobile = function () {
+        this.pin = 100;
+        this.texting = '';
+        this.inbox = [];
+        this.sent = [];
+        this.isOn = false;
+        this.checkOn = () => {
+            return this.isOn;
+        }
+        this.turnOnOff = function () {
+            this.isOn = !this.isOn;
+        }
+        this.chargePin = function () {
+            if (!this.isOn) return ;
+            this.doMethod();
+            return this.pin;
+        }
+        this.setTexting = () => {
+            if (!this.isOn) return ;
+            this.doMethod();
+            this.texting = prompt('Text');
+        }
+        this.receiveText = function (messages) {
+            if (!this.isOn) return ;
+            this.doMethod();
+            this.inbox.push(messages);
+        }
+        this.sendText = function (friend) {
+            if (!this.isOn) return ;
+            this.doMethod();
+            this.sent.push(this.texting);
+            friend.receiveText(this.texting);
+            this.texting = '';
+        }
+        this.getInbox = function () {
+            if (!this.isOn) return ;
+            this.doMethod();
+            return this.inbox;
+        }
+        this.getSent = function () {
+            if (!this.isOn) return ;
+            this.doMethod();
+            return this.sent;
+        }
+        this.doMethod = function () {
+            this.pin--;
+        }
+    }
+
+    let nokia = new Mobile();
+    nokia.checkOn();
+    nokia.turnOnOff();
+    nokia.chargePin();
+
+    let iphone = new Mobile();
+    iphone.checkOn();
+    iphone.turnOnOff();
+    iphone.chargePin();
+
+    nokia.setTexting();
+    nokia.getSent();
+    nokia.sendText(iphone);
+    alert(iphone.getInbox());
+</script>

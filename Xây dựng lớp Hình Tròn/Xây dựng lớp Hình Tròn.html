@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Hình Tròn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let Circle = function(radius) {
+        this.radius = radius;
+        this.getRadius = function() {
+            return this.radius;
+        }
+        this.getArea = function() {
+            return Math.PI * radius * radius;
+        }
+    }
+    let circle = new Circle(2);
+    radius = circle.getRadius();
+    area = circle.getArea();
+    alert("radius: " + radius + "; area: " + area);
+
+    let circle2 = new Circle(3);
+    radius = circle2.getRadius();
+    area = circle2.getArea();
+    alert("radius: " + radius + "; area: " + area);
+</script>

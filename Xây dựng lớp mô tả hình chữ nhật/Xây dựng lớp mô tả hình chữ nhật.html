@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1400" height="700" style="border: 1px solid black">
+</canvas>
+</body>
+</html>
+<script>
+    let Rectangle = function (chieudai, chieurong) {
+        this.chieudai = chieudai;
+        this.chieurong = chieurong;
+        this.getChieudai = () => {
+            return this.chieudai;
+        }
+        this.getChieurong = () => {
+            return this.chieurong;
+        }
+        this.getDientich = () => {
+            return chieudai * chieurong;
+        }
+        this.getChuvi = () => {
+            return (chieudai + chieurong) * 2;
+        }
+    }
+
+    let rectangle = new Rectangle(400, 300);
+    chieudai = rectangle.getChieudai();
+    chieurong = rectangle.getChieurong();
+    dientich = rectangle.getDientich();
+    chuvi = rectangle.getChuvi();
+    console.log('chieu dai: '+chieudai+' chieu rong: '+chieurong+' dien tich: '+dientich+' chu vi: '+chuvi );
+    function drawRectangle (){
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        ctx.rect(550,150,rectangle.chieurong,rectangle.chieudai);
+        ctx.stroke();
+    }
+    drawRectangle();
+</script>

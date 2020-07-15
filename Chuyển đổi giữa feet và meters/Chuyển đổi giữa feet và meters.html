@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<table style="border-collapse: collapse">
+    <tr>
+        <td style="border: 1px solid black">Feets</td>
+        <td style="border: 1px solid black">Meters</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; width: 50px; height: 20px" >
+            <label>
+                <input id='feets' type="text" oninput="conVert('Ft')"/>
+            </label>
+        </td>
+        <td style="border: 1px solid black; width: 50px; height: 20px">
+            <label>
+                <input id='meters' type="text" oninput="conVert('M')"/>
+            </label>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function conVert(donvidodai) {
+        let x;
+        if (donvidodai === 'Ft'){
+            x = document.getElementById('feets').value * 0.305;
+            document.getElementById('meters').value = x;
+        }else {
+            x = document.getElementById('meters').value * 3.279;
+            document.getElementById('feets').value = x;
+        }
+    }
+</script>
